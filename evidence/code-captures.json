@@ -1,0 +1,29 @@
+[
+  {
+    "source": "YOLOv5/detect.py",
+    "capture": "evidence/screenshots/04-detect-code.png",
+    "source_sha256_lf": "f97523c8a52fc019850010abf63daa92ce5756d308faf129596818cc9aabbb4e",
+    "capture_sha256": "0d6789f4a21b4ad21c5ada807686a122160a7fef2de532b093bee91be21ceba9",
+    "visible_line_start": 142,
+    "visible_line_end": 194,
+    "path_and_line_numbers_visible": true
+  },
+  {
+    "source": "YOLOv5/changedetection.py",
+    "capture": "evidence/screenshots/04-change-detection-code.png",
+    "source_sha256_lf": "a26c92145d3255d658688a178a58469eec96a16f08009f04a071ecc4927959fc",
+    "capture_sha256": "1f81cee027bf82fc95b85297b93eeed73462254cfa8243b549f98963204438e5",
+    "visible_line_start": 35,
+    "visible_line_end": 84,
+    "path_and_line_numbers_visible": true
+  },
+  {
+    "source": "YOLOv5/edge_upload.py",
+    "capture": "evidence/screenshots/04-edge-upload-code.png",
+    "source_sha256_lf": "bdeb8366a7230435b9ea716f21a0acd9998550b4a0392430423a5ee4faaedc66",
+    "capture_sha256": "d6eed976d16472d75c3ac39a5a39a18eec885b5d73cfe391bf9115182cca9418",
+    "visible_line_start": 118,
+    "visible_line_end": 159,
+    "path_and_line_numbers_visible": true
+  }
+]

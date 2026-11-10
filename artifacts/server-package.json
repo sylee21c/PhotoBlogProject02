@@ -1,0 +1,11 @@
+{
+  "file": "photoblog02-server.zip",
+  "sha256": "59b53207fd7a16c87150b93281b5b07f7b83b94db1b5bdefe5c11953ff7866bc",
+  "files": 55,
+  "excludes": [
+    "database",
+    "uploaded media",
+    "local credentials",
+    "YOLO weights"
+  ]
+}

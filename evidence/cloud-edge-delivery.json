@@ -1,0 +1,58 @@
+{
+  "verified_at": "2026-11-10T14:27:50.421679+00:00",
+  "origin": "https://blackponge.pythonanywhere.com",
+  "console_summary": {
+    "sent": 5,
+    "pending": 0,
+    "blocked": 0
+  },
+  "console_source": "user pasted actual detector output",
+  "public_http_checks": [
+    {
+      "post_id": 2,
+      "event_id_from_user_console": "26665b00-7505-4c7f-aa66-73af93a5a872",
+      "api_status": 200,
+      "image_status": 200,
+      "image_sha256": "95273d419488984faefc6b0392568e4fd56d12fb2d1a9205207abd74887aa03f",
+      "title": "laptop 출현",
+      "image_url": "https://blackponge.pythonanywhere.com/media/photos/2026/11/75a87fe0e20048e4a22a65908556f9d3.jpg"
+    },
+    {
+      "post_id": 3,
+      "event_id_from_user_console": "0ee6ad70-04ee-49ba-8106-32939b971873",
+      "api_status": 200,
+      "image_status": 200,
+      "image_sha256": "336cdb234517ddaa4700cf593872ab1cc056eebdf11b465f8354d8c30942fa8a",
+      "title": "keyboard 출현",
+      "image_url": "https://blackponge.pythonanywhere.com/media/photos/2026/11/6bcb1713d6fe47b1960a98c5457bd9fd.jpg"
+    },
+    {
+      "post_id": 4,
+      "event_id_from_user_console": "496ff206-2a10-45b7-9995-9d91956f420a",
+      "api_status": 200,
+      "image_status": 200,
+      "image_sha256": "9a7d0e2fd26e2dc0a8249a619f19065f037fac8596a6db4d71d20966397b22ee",
+      "title": "tv 출현",
+      "image_url": "https://blackponge.pythonanywhere.com/media/photos/2026/11/43ddda011f5349648226299d1948b335.jpg"
+    },
+    {
+      "post_id": 5,
+      "event_id_from_user_console": "cf128e46-8929-4888-95ea-dcd53b77c84d",
+      "api_status": 200,
+      "image_status": 200,
+      "image_sha256": "cf9ae0cb38506175cf899aade492009618de4db81228c69176dbcbf9ecfc8e08",
+      "title": "mouse 출현",
+      "image_url": "https://blackponge.pythonanywhere.com/media/photos/2026/11/6f43dd4cd41d445081328fbcc0a5da2c.jpg"
+    },
+    {
+      "post_id": 6,
+      "event_id_from_user_console": "2556f608-1055-48b0-b93d-cb17c17b5748",
+      "api_status": 200,
+      "image_status": 200,
+      "image_sha256": "823badbbc9612fe05b7a289d2d178d7032a97baeef6582ae55c76d560d7d59c4",
+      "title": "mouse 출현",
+      "image_url": "https://blackponge.pythonanywhere.com/media/photos/2026/11/c5cabc1b9c844b78ab246515690fb230.jpg"
+    }
+  ],
+  "passed": true
+}

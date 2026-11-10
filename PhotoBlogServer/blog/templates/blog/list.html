@@ -1,0 +1,7 @@
+{% extends 'blog/base.html' %}{% block content %}
+<section class="intro"><h1>사진 목록</h1></section>
+<form class="toolbar" method="get"><label class="search"><span>⌕</span><input name="q" value="{{ query }}" placeholder="제목이나 내용으로 사진 찾기" aria-label="사진 검색"></label>
+<select name="ordering" aria-label="정렬"><option value="newest" {% if ordering == 'newest' %}selected{% endif %}>최신순</option><option value="oldest" {% if ordering == 'oldest' %}selected{% endif %}>오래된순</option><option value="title" {% if ordering == 'title' %}selected{% endif %}>제목순</option></select><button class="primary">검색</button></form>
+<div class="section-label"><h2>{% if query %}‘{{ query }}’ 검색 결과{% else %}전체 사진{% endif %}</h2><span>{{ posts|length }}개의 사진</span></div>
+<div class="gallery">{% for post in posts %}<a class="card" href="{% url 'post-detail' post.pk %}"><div class="photo"><img src="{{ post.image.url }}" alt="{{ post.title }}" loading="lazy"></div><div class="card-body"><small>{{ post.published_date|date:'Y.m.d' }} · {{ post.author.username }}</small><h3>{{ post.title }}</h3><p>{{ post.text|truncatechars:80 }}</p></div></a>{% empty %}<div class="empty"><h3>사진이 없습니다.</h3><p>{% if query %}다른 검색어를 입력하세요.{% else %}로그인한 뒤 사진을 게시할 수 있습니다.{% endif %}</p></div>{% endfor %}</div>
+{% endblock %}

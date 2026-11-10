@@ -1,0 +1,54 @@
+{
+  "report_status": "Implementation, local and cloud evidence verified; submission repository prepared",
+  "report_pages_inspected": 16,
+  "embedded_images": 17,
+  "evaluator_cells_empty": true,
+  "temporary_webcam_images_removed_from_report": true,
+  "photo_plan": {
+    "state": "local_api_gallery_detail_and_android_verified",
+    "temporary_post_id": 24,
+    "temporary_local_server": "http://127.0.0.1:8002",
+    "last_temporary_post_id": 31,
+    "temporary_images_for_submission": false,
+    "reason": "User wants to replace the temporary webcam scene with a newly photographed scene.",
+    "retake_report_ids": [
+      "3",
+      "6",
+      "7",
+      "9"
+    ],
+    "consistency_rule": "The new server post, original annotated JPEG, web detail and Android capture must refer to the same selected post.",
+    "new_post_id": 41,
+    "baseline_screenshot": "evidence/screenshots/03-final-baseline.png",
+    "baseline_sha256": "7ae1db713292a6f3939fe7839e2fa2d47adf4f3ae78499a4bdce2d9a4fdcaf02",
+    "android_post_id": 41
+  },
+  "student_name_and_id_empty": true,
+  "source_template_preserved": true,
+  "report_sha256": "6b905a08337e84a48d5889ee1f31f976325b8569c878620af035ab3b2ec5affb",
+  "staged_files": 269,
+  "private_credentials_excluded": true,
+  "baseline_hash_verified": true,
+  "server_tests": {
+    "tests": 55,
+    "failures": 0,
+    "errors": 0,
+    "coverage_percent": 91.95
+  },
+  "edge_tests": {
+    "tests": 10,
+    "failures": 0,
+    "errors": 0
+  },
+  "android_tests": {
+    "tests": 9,
+    "failures": 0,
+    "errors": 0
+  },
+  "real_http_delivery_passed": true,
+  "pending": [
+    "student name and ID, then LMS URL submission"
+  ],
+  "submission_repository": "https://github.com/sylee21c/PhotoBlogProject02",
+  "cloud_edge_delivery_verified": true
+}

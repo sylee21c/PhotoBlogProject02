@@ -1,0 +1,8 @@
+plugins { id 'com.android.application' version '9.0.0' apply false }
+
+// Optional ASCII output location for Windows JVM test workers on non-ASCII paths.
+def outputRoot = System.getenv('PHOTOVIEWER_BUILD_ROOT')
+if (outputRoot) {
+    layout.buildDirectory = file(outputRoot + '/root')
+    subprojects { layout.buildDirectory = file(outputRoot + '/' + project.name) }
+}

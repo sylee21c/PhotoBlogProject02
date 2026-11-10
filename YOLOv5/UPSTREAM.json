@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/ultralytics/yolov5",
+  "tag": "v7.0",
+  "commit": "915bbf294bb74c859f0b41f1c23bc395014ea679",
+  "original_detect_sha256": "65a28038fa49a983a23f2655e1af9f4984dbf09dbc93804430ccb8861d3e5045",
+  "original_detect_copy": "baseline/detect.py",
+  "license": "GPL-3.0"
+}

@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}{% block content %}<a class="back" href="/">← 사진 목록</a><section class="editor"><h1>{% if editing %}게시글 수정{% else %}사진 게시{% endif %}</h1><p>JPEG · PNG · WebP, 최대 10 MB{% if editing %} · 사진을 선택하지 않으면 기존 사진을 유지합니다.{% endif %}</p>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}{{ form.non_field_errors }}
+<label for="id_image">사진</label>{{ form.image }}{{ form.image.errors }}<img id="preview" alt="선택한 사진 미리보기" {% if editing %}src="{{ post.image.url }}"{% else %}hidden{% endif %}>
+<label for="id_title">제목</label>{{ form.title }}{{ form.title.errors }}<small id="title-count">0 / 200</small>
+<label for="id_text">내용</label>{{ form.text }}{{ form.text.errors }}<small id="text-count">0 / 5000</small>
+<div class="actions"><a href="/">취소</a><button class="primary" type="submit">{% if editing %}수정 저장{% else %}사진 게시하기{% endif %}</button></div></form></section>{% endblock %}
+{% block scripts %}<script>
+for(const [id,max] of [['title',200],['text',5000]]){const input=document.getElementById('id_'+id);const update=()=>document.getElementById(id+'-count').textContent=Array.from(input.value).length+' / '+max;input.addEventListener('input',update);update();}
+let previewUrl;document.getElementById('id_image').addEventListener('change',event=>{if(previewUrl)URL.revokeObjectURL(previewUrl);const file=event.target.files[0];const preview=document.getElementById('preview');preview.hidden=!file;if(file){previewUrl=URL.createObjectURL(file);preview.src=previewUrl;}});
+</script>{% endblock %}

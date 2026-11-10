@@ -1,0 +1,10 @@
+[run]
+branch = True
+source = blog,api_engine
+omit = */migrations/*,*/tests/*,*/management/*,*/admin.py,*/apps.py
+
+[report]
+show_missing = True
+
+[html]
+directory = ../evidence/coverage

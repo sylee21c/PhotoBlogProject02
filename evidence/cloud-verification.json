@@ -1,0 +1,43 @@
+{
+  "verified_at": "2026-11-10T14:15:35.972105+00:00",
+  "origin": "https://blackponge.pythonanywhere.com",
+  "checks": {
+    "health": {
+      "url": "https://blackponge.pythonanywhere.com/api/health/",
+      "status": 200
+    },
+    "api_root": {
+      "url": "https://blackponge.pythonanywhere.com/api_root/",
+      "status": 200
+    },
+    "post": {
+      "url": "https://blackponge.pythonanywhere.com/api_root/Post/1/",
+      "status": 200
+    },
+    "gallery": {
+      "url": "https://blackponge.pythonanywhere.com/",
+      "status": 200
+    },
+    "detail": {
+      "url": "https://blackponge.pythonanywhere.com/post/1/",
+      "status": 200
+    }
+  },
+  "post": {
+    "id": 1,
+    "author": 1,
+    "author_name": "blackponge",
+    "title": "책상 위 모니터와 키보드 검출",
+    "text": "YOLOv5로 모니터(tv), 키보드, 마우스, 휴대폰을 검출한 사진입니다.",
+    "created_date": "2026-11-10T23:09:57.996364+09:00",
+    "published_date": "2026-11-10T23:09:57.996375+09:00",
+    "image": "https://blackponge.pythonanywhere.com/media/photos/2026/11/91d95942b104445ba371659776a5c8a5.jpg"
+  },
+  "image_http_status": 200,
+  "image_content_type": "image/jpeg",
+  "image_available": true,
+  "matches_selected_local_photo": true,
+  "upload_method": "user performed browser multipart POST",
+  "edge_cloud_auto_upload_verified": true,
+  "edge_delivery_evidence": "evidence/cloud-edge-delivery.json"
+}

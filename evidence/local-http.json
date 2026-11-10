@@ -1,0 +1,18 @@
+[
+  {
+    "status": 200,
+    "path": "/api/health/"
+  },
+  {
+    "status": 200,
+    "path": "/api_root/"
+  },
+  {
+    "status": 200,
+    "path": "/api_root/Post/41/"
+  },
+  {
+    "status": 200,
+    "path": "/post/41/"
+  }
+]

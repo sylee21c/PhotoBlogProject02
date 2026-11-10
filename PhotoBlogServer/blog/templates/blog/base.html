@@ -1,0 +1,9 @@
+{% load static %}<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}PhotoBlog{% endblock %}</title>
+<link rel="stylesheet" href="{% static 'blog/site.css' %}"></head>
+<body><header class="header"><a class="brand" href="/">PhotoBlog</a>
+<nav><a href="/api_root/">API</a>{% if user.is_authenticated %}<a class="primary" href="{% url 'post-new' %}">＋ 새 사진</a><form method="post" action="{% url 'logout' %}">{% csrf_token %}<button class="quiet">{{ user.username }} · 로그아웃</button></form>{% else %}<a href="{% url 'login' %}">로그인</a>{% endif %}</nav></header>
+<main>{% block content %}{% endblock %}</main>
+<footer>PhotoBlog</footer>
+{% block scripts %}{% endblock %}</body></html>

@@ -1,0 +1,3 @@
+{% extends 'blog/base.html' %}{% block title %}{{ post.title }} · PhotoBlog{% endblock %}{% block content %}
+<a class="back" href="/">← 모든 사진</a><article class="detail"><img class="hero-photo" src="{{ post.image.url }}" alt="{{ post.title }}"><div class="detail-body"><p class="eyebrow">{{ post.published_date|date:'Y.m.d H:i' }} · {{ post.author.username }}</p><h1>{{ post.title }}</h1><div class="prose">{{ post.text|linebreaks }}</div><a href="/api_root/Post/{{ post.pk }}/">이 게시글의 API 보기 ↗</a>{% if user == post.author %}<div class="actions"><a class="primary" href="{% url 'post-edit' post.pk %}">게시글 수정</a><a href="{% url 'post-delete' post.pk %}">게시글 삭제</a></div>{% endif %}</div></article>
+{% endblock %}

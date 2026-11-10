@@ -1,0 +1,37 @@
+{
+  "scenario": "isolated real HTTP recovery and event replay",
+  "steps": [
+    {
+      "step": "server offline",
+      "pending": 1,
+      "attempts": 1,
+      "event_id": "72df5292-dacd-4ffc-9e52-bf022dd49906",
+      "error": "ConnectTimeout"
+    },
+    {
+      "step": "reopened persistent queue",
+      "same_event_id": true
+    },
+    {
+      "step": "server recovered",
+      "sent": 1,
+      "pending": 0,
+      "post_id": 1,
+      "same_event_id": true
+    },
+    {
+      "step": "same event replay",
+      "http_status": 200,
+      "replayed": true,
+      "same_post_id": true,
+      "post_count": 1
+    },
+    {
+      "step": "event ID reused for changed payload",
+      "http_status": 409
+    }
+  ],
+  "image_sha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c",
+  "passed": true,
+  "verified_at": "2026-11-10T08:13:35.266010+00:00"
+}

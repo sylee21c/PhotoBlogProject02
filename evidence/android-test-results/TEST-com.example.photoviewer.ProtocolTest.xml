@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.photoviewer.ProtocolTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-11-09T15:26:29.573Z" hostname="DESKTOP-1MNHSGJ" time="0.003">
+  <properties/>
+  <testcase name="filenamesCannotInjectHeaders" classname="com.example.photoviewer.ProtocolTest" time="0.001"/>
+  <testcase name="acceptsEmulatorPort" classname="com.example.photoviewer.ProtocolTest" time="0.0"/>
+  <testcase name="multipartPreservesUnicodeAndBinaryAndEndsBoundary" classname="com.example.photoviewer.ProtocolTest" time="0.001"/>
+  <testcase name="rejectsNonImageMime" classname="com.example.photoviewer.ProtocolTest" time="0.0"/>
+  <testcase name="normalizesServerRoot" classname="com.example.photoviewer.ProtocolTest" time="0.0"/>
+  <testcase name="rejectsNonHttpAndEmbeddedCredentials" classname="com.example.photoviewer.ProtocolTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

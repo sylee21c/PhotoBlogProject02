@@ -1,0 +1,22 @@
+test_post_requires_matching_event_acknowledgement (test_delivery.ProtocolTests.test_post_requires_matching_event_acknowledgement) ... ok
+test_credentials_are_not_persisted (test_delivery.QueueTests.test_credentials_are_not_persisted) ... ok
+test_event_id_cannot_be_reused_for_different_payload (test_delivery.QueueTests.test_event_id_cannot_be_reused_for_different_payload) ... ok
+test_other_servers_and_accounts_cannot_consume_this_queue (test_delivery.QueueTests.test_other_servers_and_accounts_cannot_consume_this_queue) ... ok
+test_pending_event_survives_reopening_queue (test_delivery.QueueTests.test_pending_event_survives_reopening_queue) ... ok
+EDGE blocked event=aa306a78-c644-4c01-a7c9-00e036d611d2: HTTP 409
+test_rejected_event_is_retained_but_not_retried_forever (test_delivery.QueueTests.test_rejected_event_is_retained_but_not_retried_forever) ... ok
+EDGE queued retry event=2c2e1900-89d7-444c-b04d-e50985f64ad4 reason=Timeout
+EDGE uploaded event=2c2e1900-89d7-444c-b04d-e50985f64ad4 post=17
+test_transport_failure_keeps_same_event_for_retry (test_delivery.QueueTests.test_transport_failure_keeps_same_event_for_retry) ... ok
+test_one_frame_dropout_does_not_rearm_appearance (test_delivery.TransitionTests.test_one_frame_dropout_does_not_rearm_appearance) ... ok
+EDGE appearance=person event=9d301967-7f83-4d64-9bcf-822739088fc7
+EDGE appearance=person event=7afa465b-ba40-4101-8691-d8db11a640ff
+EDGE appearance=person event=3165673c-50f1-42a2-835c-96407d9c8699
+EDGE delivery sent=0 pending=3 blocked=0
+test_same_class_only_uploads_on_zero_to_one_and_streams_are_independent (test_delivery.TransitionTests.test_same_class_only_uploads_on_zero_to_one_and_streams_are_independent) ... ok
+test_single_image_can_be_confirmed_immediately (test_delivery.TransitionTests.test_single_image_can_be_confirmed_immediately) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.186s
+
+OK

@@ -1,0 +1,19 @@
+{
+  "state": "local_api_gallery_detail_and_android_verified",
+  "temporary_post_id": 24,
+  "temporary_local_server": "http://127.0.0.1:8002",
+  "last_temporary_post_id": 31,
+  "temporary_images_for_submission": false,
+  "reason": "User wants to replace the temporary webcam scene with a newly photographed scene.",
+  "retake_report_ids": [
+    "3",
+    "6",
+    "7",
+    "9"
+  ],
+  "consistency_rule": "The new server post, original annotated JPEG, web detail and Android capture must refer to the same selected post.",
+  "new_post_id": 41,
+  "baseline_screenshot": "evidence/screenshots/03-final-baseline.png",
+  "baseline_sha256": "7ae1db713292a6f3939fe7839e2fa2d47adf4f3ae78499a4bdce2d9a4fdcaf02",
+  "android_post_id": 41
+}

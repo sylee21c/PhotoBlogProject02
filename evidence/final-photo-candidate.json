@@ -1,0 +1,26 @@
+{
+  "state": "local_api_gallery_detail_and_android_verified",
+  "server": "http://127.0.0.1:8002",
+  "post": {
+    "id": 41,
+    "author": 1,
+    "author_name": "student",
+    "title": "cell phone 출현",
+    "text": "새로 검출된 객체: cell phone\n검출 시각: 2026-11-10T07:46:18.303246+00:00",
+    "created_date": "2026-11-10T16:46:18.320129+09:00",
+    "published_date": "2026-11-10T16:46:18.32013+09:00",
+    "image": "http://127.0.0.1:8002/media/photos/2026/11/9043b626c4314fd1af87c9213491a49b.jpg"
+  },
+  "image_file": "evidence/final-detected-photo.jpg",
+  "image_sha256": "88186e7d53712eda1c38222197699df19d58316973e62b4518cca4c62b2a4d16",
+  "web_detail_url": "http://127.0.0.1:8002/post/41/",
+  "baseline_screenshot_complete": true,
+  "web_screenshot_complete": true,
+  "android_screenshot_complete": true,
+  "local_api_screenshot": "evidence/screenshots/05-local-api-address.png",
+  "web_detail_screenshot": "evidence/screenshots/06-local-detail-address.png",
+  "web_list_screenshot_complete": true,
+  "web_list_screenshot": "evidence/screenshots/06-local-list-address.png",
+  "current_server_post_count": 21,
+  "android_loaded_post_count": 12
+}

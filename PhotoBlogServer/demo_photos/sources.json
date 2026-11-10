@@ -1,0 +1,32 @@
+[
+  {
+    "file": "mountain-lake.jpg",
+    "title": "산과 호수",
+    "text": "산이 비치는 호수 사진. 예시 사진: Pixabay / Pexels.",
+    "author": "Pixabay",
+    "source": "https://www.pexels.com/photo/body-of-water-with-snow-covered-mountain-range-in-background-273066/",
+    "download": "https://images.pexels.com/photos/273066/pexels-photo-273066.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "license": "CC0 (as marked on the photo page)",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "file": "beach.jpg",
+    "title": "해변",
+    "text": "파도가 밀려오는 해변. 예시 사진: Pixabay / Pexels.",
+    "author": "Pixabay",
+    "source": "https://www.pexels.com/photo/seashore-under-blue-sky-417050/",
+    "download": "https://images.pexels.com/photos/417050/pexels-photo-417050.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "license": "CC0 (as marked on the photo page)",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "file": "lake-dock.jpg",
+    "title": "호수의 선착장",
+    "text": "해 질 무렵의 나무 선착장. 예시 사진: Pok Rie / Pexels.",
+    "author": "Pok Rie",
+    "source": "https://www.pexels.com/photo/brown-wooden-dock-beside-body-of-water-165214/",
+    "download": "https://images.pexels.com/photos/165214/pexels-photo-165214.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "license": "Pexels License",
+    "license_url": "https://www.pexels.com/license/"
+  }
+]

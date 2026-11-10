@@ -1,0 +1,5 @@
+<resources>
+    <item name="sync" type="id"/><item name="upload" type="id"/><item name="settings" type="id"/>
+    <item name="search" type="id"/><item name="status" type="id"/><item name="photo_list" type="id"/>
+    <item name="favorites" type="id"/><item name="server_url" type="id"/>
+</resources>
