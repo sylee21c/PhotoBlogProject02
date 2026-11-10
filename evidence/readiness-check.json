@@ -1,6 +1,6 @@
 {
   "report_status": "Implementation and evidence verified; report identity filled",
-  "report_pages_inspected": 15,
+  "report_pages_inspected": 4,
   "embedded_images": 17,
   "evaluator_cells_empty": true,
   "temporary_webcam_images_removed_from_report": true,
@@ -25,7 +25,7 @@
   },
   "student_name_and_id_empty": false,
   "source_template_preserved": true,
-  "report_sha256": "b6bb79195e1304e830af187541c18c0fcf7b392b715310de332a17017950876c",
+  "report_sha256": "5726ab644fb119216672fe59f8102ba2b54dd3d8d956c24c21c8a673bb7872ed",
   "staged_files": 269,
   "private_credentials_excluded": true,
   "baseline_hash_verified": true,
@@ -51,5 +51,6 @@
   ],
   "submission_repository": "https://github.com/sylee21c/PhotoBlogProject02",
   "cloud_edge_delivery_verified": true,
-  "student_name_and_id_present": true
+  "student_name_and_id_present": true,
+  "evidence_layout": "Original seven-column table; all 17 images in related-evidence cells"
 }
