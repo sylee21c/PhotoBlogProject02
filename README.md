@@ -1,31 +1,69 @@
 # PhotoBlog 공통평가 02
 
-공통평가 01과 분리한 작업 폴더입니다. Django 서버와 Android 앱의 검증된 소스를 기반으로 시작합니다.
+YOLOv5가 웹캠에서 새로 검출한 객체의 사진을 Django 서버에 등록하고 Android 앱에서 조회하는 프로젝트입니다.
 
-Ch08 YOLO 강의자료와 공통평가 02 Word 양식을 기준으로 구현했습니다. 기본 YOLO 웹캠 검출, 검출 사진의 로컬 서버 전송, Android에서 같은 사진 표시는 실제로 확인했습니다. 클라우드 배포, 일부 화면 캡처와 제출 URL은 아직 남아 있습니다. 전체 항목 완료 상태는 아닙니다.
+저장소: https://github.com/sylee21c/PhotoBlogProject02
 
-제출 저장소도 공통평가 01과 별도로 생성합니다. 관련증빙 칸에 캡처를 직접 삽입하고, 주소창과 동작 완료 결과를 포함합니다. 추가 기능은 Edge 전송 대기열과 재시도, 서버의 이벤트 중복 등록 방지 두 개입니다.
+클라우드: https://blackponge.pythonanywhere.com/
 
-## 로컬 실행
+## 구성
 
-PowerShell에서 프로젝트 루트를 열고 `scripts/setup.ps1`로 서버를 준비한 뒤 `scripts/start-server.ps1`로 실행합니다. 웹 주소는 `http://127.0.0.1:8002/`, Android 에뮬레이터 주소는 `http://10.0.2.2:8002`입니다.
+| 경로 | 내용 |
+|---|---|
+| PhotoBlogServer | Django API와 사진 조회 웹 화면 |
+| PhotoViewer | Android 동기화와 사진 조회 앱 |
+| YOLOv5 | 웹캠 검출과 서버 자동 전송 |
+| evidence | 항목별 캡처와 테스트 결과 |
+| artifacts | Android APK와 서버 배포 ZIP |
 
-Python 3.12 환경에서 `scripts/setup-edge.ps1`을 실행하면 CPU용 PyTorch와 YOLO 의존성 및 공식 모델을 준비합니다. `scripts/start-yolo.ps1 -Baseline`은 원본 detect.py를 별도 디렉터리에 복원해 실행합니다. `scripts/start-yolo.ps1`은 수정한 검출기를 실행하고 새 객체 종류가 나타날 때 검출 사진을 서버에 보냅니다. 검출 창에서 q를 누르면 종료합니다.
+수행 결과 보고서는 루트의 `모바일웹서비스 프로젝트 공통평가 02_수행 결과 보고서.docx`입니다.
 
-로컬 계정은 서버 초기화가 생성하며 인증정보는 Git에서 제외한 `.runtime/demo-credentials.json`에 저장합니다. 클라우드에 연결할 때는 `PHOTOBLOG_SERVER`, `PHOTOBLOG_USERNAME`, `PHOTOBLOG_PASSWORD` 또는 `PHOTOBLOG_TOKEN`을 별도로 설정합니다. 비밀번호와 토큰을 소스나 캡처에 넣지 않습니다.
+## 실행
 
-기본 모델은 YOLOv5 v7.0이며 원본 출처와 체크섬은 `YOLOv5/UPSTREAM.json`에 기록했습니다. YOLOv5 소스에는 GPL-3.0 라이선스가 적용됩니다.
+프로젝트 루트의 PowerShell에서 실행합니다.
 
-웹캠에서는 클래스의 출현과 사라짐이 3프레임 연속 확인된 뒤 상태를 바꿉니다. `--stability-frames 1`을 직접 detect.py에 전달하면 강의의 프레임 단위 전이와 동일하게 동작합니다. 같은 물체를 개체별로 추적하는 기능은 아니며 클래스의 유무를 비교합니다. 모델의 분류 오류까지 제거하는 기능은 아닙니다.
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\setup.ps1
+powershell -ExecutionPolicy Bypass -File .\scripts\start-server.ps1
+```
 
-## 검증과 제출 준비
+웹 주소는 `http://127.0.0.1:8002/`, Android 에뮬레이터의 서버 주소는 `http://10.0.2.2:8002`입니다. 앱은 `artifacts/PhotoViewer-debug.apk`로 설치합니다.
 
-서버 자동 테스트 55개, Edge 자동 테스트 10개, Android 단위 테스트 9개가 통과했습니다. `scripts/verify_delivery.py`는 별도의 임시 DB와 실제 로컬 HTTP 서버로 연결 실패 후 복구, 대기열 재개, 이벤트 재전송의 중복 방지를 확인합니다. 실행은 `.venv-edge/Scripts/python.exe scripts/verify_delivery.py`이며 기존 로컬 게시글은 변경하지 않습니다. 결과는 `evidence/`에 있습니다.
+별도 PowerShell에서 Python 3.12 기반 Edge 환경을 준비하고 웹캠 검출기를 실행합니다.
 
-Android APK는 `artifacts/PhotoViewer-debug.apk`, 클라우드 배포 소스 ZIP은 `artifacts/photoblog02-server.zip`입니다. 폴더 구조, 경로와 줄 번호를 포함한 코드, 기본 YOLO 검출, 로컬 API와 사진 조회, Android 동기화, 두 편의 기능의 검증 화면을 보고서에 넣었습니다. 클라우드 API 루트와 사진 목록 및 상세 화면은 주소창을 포함합니다. Edge에서 클라우드로 검출 이벤트 5건을 자동 전송했고 대기와 차단은 0건이었습니다. 게시글 2~6번과 사진 URL은 모두 HTTP 200으로 확인했습니다. 결과는 `evidence/cloud-edge-delivery.json`에 있습니다.
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\setup-edge.ps1
+powershell -ExecutionPolicy Bypass -File .\scripts\start-yolo.ps1
+```
 
-제출 저장소: https://github.com/sylee21c/PhotoBlogProject02
+`start-yolo.ps1 -Baseline`은 원본 detect.py를 실행합니다. 검출 창에서 q를 누르면 종료합니다.
 
-클라우드 서비스: https://blackponge.pythonanywhere.com/
+웹캠은 객체 종류의 유무를 비교하고 3프레임 연속 검출로 출현을 판정합니다. 새로 출현하면 검출 상자가 포함된 사진을 서버에 전송합니다.
 
-학번과 이름은 요청에 따라 비워 두었으며 평가자 판정도 비워 두었습니다.
+로컬 인증정보는 `.runtime/demo-credentials.json`에 생성됩니다. 클라우드 연결에는 `PHOTOBLOG_SERVER`와 `PHOTOBLOG_USERNAME`, `PHOTOBLOG_PASSWORD` 또는 `PHOTOBLOG_TOKEN`을 설정합니다. 배포 절차는 [PythonAnywhere 설정](docs/PYTHONANYWHERE.md)에 있습니다.
+
+## 검증 결과
+
+| 항목 | 결과 |
+|---|---|
+| Django 자동 테스트 | 55개 통과 |
+| Edge 자동 테스트 | 10개 통과 |
+| Android 단위 테스트 | 9개 통과 |
+| 로컬 연동 | 웹캠 사진 자동 등록과 Android 조회 확인 |
+| 클라우드 연동 | 검출 이벤트 5건 자동 전송, 대기 0건, 차단 0건 |
+| 클라우드 사진 조회 | 게시글 2~6번 API와 사진 모두 HTTP 200 |
+
+추가 기능은 두 가지입니다.
+
+- 전송 대기열과 재시도: 실패한 사진과 이벤트 ID를 SQLite에 보관하고 서버 복구 후 이어서 전송합니다.
+- 중복 등록 방지: 같은 이벤트를 재전송하면 기존 게시글을 반환하고, 같은 ID로 내용이 바뀌면 HTTP 409를 반환합니다.
+
+아래 명령으로 연결 실패 후 복구와 중복 등록 방지를 실제 로컬 HTTP 서버에서 검증합니다.
+
+```powershell
+.\.venv-edge\Scripts\python.exe .\scripts\verify_delivery.py --summary
+```
+
+결과는 `evidence/delivery-integration.json`, 클라우드 전송 기록은 `evidence/cloud-edge-delivery.json`에 있습니다.
+
+YOLOv5 v7.0의 출처와 체크섬은 `YOLOv5/UPSTREAM.json`에 기록했습니다. YOLOv5 소스에는 GPL-3.0 라이선스가 적용됩니다.

@@ -1,6 +1,6 @@
 {
-  "report_status": "Implementation, local and cloud evidence verified; submission repository prepared",
-  "report_pages_inspected": 16,
+  "report_status": "Implementation and evidence verified; report identity filled",
+  "report_pages_inspected": 15,
   "embedded_images": 17,
   "evaluator_cells_empty": true,
   "temporary_webcam_images_removed_from_report": true,
@@ -23,9 +23,9 @@
     "baseline_sha256": "7ae1db713292a6f3939fe7839e2fa2d47adf4f3ae78499a4bdce2d9a4fdcaf02",
     "android_post_id": 41
   },
-  "student_name_and_id_empty": true,
+  "student_name_and_id_empty": false,
   "source_template_preserved": true,
-  "report_sha256": "6b905a08337e84a48d5889ee1f31f976325b8569c878620af035ab3b2ec5affb",
+  "report_sha256": "b6bb79195e1304e830af187541c18c0fcf7b392b715310de332a17017950876c",
   "staged_files": 269,
   "private_credentials_excluded": true,
   "baseline_hash_verified": true,
@@ -47,8 +47,9 @@
   },
   "real_http_delivery_passed": true,
   "pending": [
-    "student name and ID, then LMS URL submission"
+    "LMS URL submission"
   ],
   "submission_repository": "https://github.com/sylee21c/PhotoBlogProject02",
-  "cloud_edge_delivery_verified": true
+  "cloud_edge_delivery_verified": true,
+  "student_name_and_id_present": true
 }
